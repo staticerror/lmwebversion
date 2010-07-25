@@ -1,19 +1,40 @@
 
-   <form action="/links/getter" method="get">
-      Enter the site:
+
+
+<div id="stylized" class="myform">
+<form id="form" name="form" method="get" action="/links/getter">
+<h1>Scrape the web!</h1>
+
+
+<label>Site:
+<span class="small">More Coming Soon!</span>
+</label>
       <select name = "clname">
   <option>Bing</option>
   <option>Yahoo</option>
   <option>Google</option>
-</select><br />
-     
 
-      Enter keyword: 
-      <input id="key" name = "key"  size="30" type="text" /><br />
+</select> 
 
-    Enter no of links:
-      <input id="no" name = "no"  size="30" type="text" /><br />
+<br />
 
-      <input name="commit" type="submit" value="Go" />
-    </form>
+<label>Keyword
+<span class="small">Only one</span>
+</label>
+<input type="text" name="key" id="key" />
+<br />
+
+
+<label>Number of Links
+<span class="small">Min. 10 , Max 1000</span>
+</label>
+
+<input type="text" name="no" id="no" />
+
+
+<button type="submit">Go</button>
+<div class="spacer"></div>
+
+</form>
+</div>
 

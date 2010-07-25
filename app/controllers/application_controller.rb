@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-  layout 'application', :except => :getter    
+  #layout 'application', :except => :getter    
   
 end

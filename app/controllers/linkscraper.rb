@@ -10,7 +10,7 @@ class LinkScraper
   
   def initialize(key="", total = 100)
     @keyword = key
-    @numperpage = 50
+    @numperpage = 10
     @agent = Mechanize.new
     @url = 'http://rubyonrails.com/'
     @pattern = 'a/@href'
@@ -21,7 +21,8 @@ class LinkScraper
 
   def getLinks
     @resultlinks = []
-    Range.new(0, @total, true).step(10) do |no|
+    mytotal = @total 
+    Range.new(0, mytotal, true).step(10) do |no|
       no = no.to_s
       @url = @url.gsub(/(&first=|&start=)[0-9]+/, '\1') + no    # The url, it will end with &start or &first
       @page = @agent.get(@url)
@@ -64,7 +65,7 @@ class Yahoo < LinkScraper
 
   def getLinks()
     BOSSMan.application_id = 'appid=%20RFn8O53V34FfngzZkPWYGuSn0JN8fFDN25_.cKT86Kh3eFZYX_gPc693ao_3yRL4xNE-'
-    mytotal = @total / 5
+    mytotal = @total 
     Range.new(0, mytotal, true).step(10) do |no|
       no = no.to_s
       news = BOSSMan::Search.web(@keyword ,:count => @numperpage, :start => no)
