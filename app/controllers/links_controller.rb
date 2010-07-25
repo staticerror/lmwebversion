@@ -2,21 +2,11 @@ require "linkscraper.rb"
 
 class LinksController < ApplicationController
   
-  def bing
-  
-  n = Bing.new "cat", 20
-  @links = n.getLinks
-	
-  
-  end
+  #Main entry point
+  def get
 
-  def google
-  @name = params[:name]
   end
-
-  def yahoo
   
-  end
   
   #Used only to get links for ajax purposes
   def getter
