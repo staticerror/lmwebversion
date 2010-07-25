@@ -1,0 +1,13 @@
+
+
+table,th,td
+{
+border:1px solid green;
+}
+
+#displaytable {
+width:750px;
+height:550px;
+padding:0px;
+
+ }
