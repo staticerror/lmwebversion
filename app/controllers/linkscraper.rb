@@ -15,7 +15,7 @@ class LinkScraper
     @url = 'http://rubyonrails.com/'
     @pattern = 'a/@href'
     @resultlinks = []
-    @total = total
+    @total = total 
   end
 
 
@@ -64,7 +64,8 @@ class Yahoo < LinkScraper
 
   def getLinks()
     BOSSMan.application_id = 'appid=%20RFn8O53V34FfngzZkPWYGuSn0JN8fFDN25_.cKT86Kh3eFZYX_gPc693ao_3yRL4xNE-'
-    Range.new(0, @total, true).step(10) do |no|
+    mytotal = @total / 5
+    Range.new(0, mytotal, true).step(10) do |no|
       no = no.to_s
       news = BOSSMan::Search.web(@keyword ,:count => @numperpage, :start => no)
       news.results.each do |result|
