@@ -1,4 +1,4 @@
-require "rbscrape/linkscraper.rb"
+require "linkscraper.rb"
 
 class LinksController < ApplicationController
   
